@@ -1,0 +1,55 @@
+{
+    "name": "phpdot/server-sapi",
+    "description": "Classic-SAPI runtime adapter for PSR-15 (PHP-FPM, Apache mod_php, php -S). Framework-agnostic.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Omar Hamdan",
+            "email": "omar@phpdot.com"
+        }
+    ],
+    "keywords": ["sapi", "fpm", "apache", "mod_php", "http", "server", "emitter", "psr-7", "psr-15", "psr-17"],
+    "require": {
+        "php": ">=8.3",
+        "phpdot/contracts": "^1.8",
+        "psr/http-factory": "^1.0",
+        "psr/http-message": "^2.0",
+        "psr/http-server-handler": "^1.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.94",
+        "phpdot/container": "^1.7",
+        "phpdot/http": "^2.0",
+        "phpstan/phpstan": "^2.0",
+        "phpstan/phpstan-strict-rules": "^2.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "suggest": {
+        "phpdot/container": "Required for the framework's manifest scanner to auto-wire RequestFactory, SapiEmitter, and SapiServer (which binds ServerInterface) via the #[Singleton]/#[Binds] attributes. The attributes are inert at runtime; standalone consumers don't need it installed."
+    },
+    "autoload": {
+        "psr-4": {
+            "PHPdot\\Server\\Sapi\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PHPdot\\Server\\Sapi\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse --memory-limit=256M",
+        "cs-fix": "php-cs-fixer fix",
+        "cs-check": "php-cs-fixer fix --dry-run --diff",
+        "check": [
+            "@test",
+            "@analyse",
+            "@cs-check"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
