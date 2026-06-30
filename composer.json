@@ -11,7 +11,7 @@
     ],
     "keywords": ["sapi", "fpm", "apache", "mod_php", "http", "server", "emitter", "psr-7", "psr-15", "psr-17"],
     "require": {
-        "php": ">=8.3",
+        "php": ">=8.4",
         "phpdot/contracts": "^1.8",
         "psr/http-factory": "^1.0",
         "psr/http-message": "^2.0",
