@@ -20,7 +20,7 @@
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.94",
         "phpdot/container": "^1.7",
-        "phpdot/http": "^2.0",
+        "phpdot/http": "^3.0",
         "phpstan/phpstan": "^2.0",
         "phpstan/phpstan-strict-rules": "^2.0",
         "phpunit/phpunit": "^11.0"

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PHPdot\Server\Sapi\Tests\Unit;
 
-use PHPdot\Http\ResponseFactory;
+use PHPdot\Http\Factory\ResponseFactory;
 use PHPdot\Server\Sapi\RequestFactory;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;

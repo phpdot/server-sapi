@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PHPdot\Server\Sapi\Tests\Unit;
 
-use PHPdot\Http\ResponseFactory;
+use PHPdot\Http\Factory\ResponseFactory;
 use PHPdot\Server\Sapi\Contract\EmitterInterface;
 use PHPdot\Server\Sapi\Contract\RequestFactoryInterface;
 use PHPdot\Server\Sapi\Exception\EmitterException;
